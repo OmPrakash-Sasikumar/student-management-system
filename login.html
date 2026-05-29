@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body style="text-align:center; margin-top:100px;">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="username" placeholder="Username"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login(){
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    fetch("login.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "username=" + username + "&password=" + password
+    })
+    .then(res => res.text())
+    .then(data => {
+        if(data === "success"){
+            window.location.href = "index.php";
+        }else{
+            alert("Invalid Login");
+        }
+    });
+}
+</script>
+
+</body>
+</html>

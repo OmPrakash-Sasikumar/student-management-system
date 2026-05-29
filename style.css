@@ -1,0 +1,225 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+.top-bar{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.top-bar button{
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dash-btn{
+    background: #28a745;
+    color: white;
+}
+
+.logout-btn{
+    background: #dc3545;
+    color: white;
+}
+
+.form-box{
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box input{
+    margin: 8px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addStudent{
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#searchBox{
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#count{
+    text-align: center;
+    font-weight: bold;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+#clearAll, #sortBtn{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#clearAll{
+    background: #dc3545;
+    color: white;
+}
+
+#sortBtn{
+    background: #17a2b8;
+    color: white;
+}
+
+#studentList{
+    width: 60%;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+#studentList li{
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.edit-btn{
+    background: #ffc107;
+    color: black;
+}
+
+.delete-btn{
+    background: #dc3545;
+    color: white;
+}
+
+.edit-btn, .delete-btn{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.profile-box{
+    width: 40%;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+}
+
+#message{
+    text-align: center;
+    margin: 10px;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+.action-buttons{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
+
+.main-container{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2{
+    text-align: center;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li{
+    padding: 10px;
+    margin: 10px 0;
+    background: #495057;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar ul li:hover{
+    background: #007bff;
+}
+
+.main{
+    margin-left: 220px;
+    width: 100%;
+    padding: 20px;
+}
