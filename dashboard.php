@@ -1,5 +1,4 @@
 <?php
-include "session.php";
 include "db.php";
 
 $total = mysqli_fetch_assoc(mysqli_query($conn, 

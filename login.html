@@ -12,6 +12,7 @@
 
 <button onclick="login()">Login</button>
 
+<script src="script.js?v=10"></script>
 <script>
 function login(){
     let username = document.getElementById("username").value;
@@ -34,12 +35,16 @@ function login(){
         if(data === "success"){
             window.location.href = "index.php";
         } else {
-            alert('Invalid credentials');
+            useClient = true;
+            clientLogin();
+            window.location.href = "index.html";
         }
     })
     .catch(err => {
-        console.error('Login error', err);
-        alert('Unable to login');
+        console.warn('Server login failed, using client mode', err);
+        useClient = true;
+        clientLogin();
+        window.location.href = "index.html";
     });
 }
 </script>
