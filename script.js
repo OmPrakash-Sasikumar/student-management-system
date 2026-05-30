@@ -180,11 +180,14 @@ function loadStudents(){
     fetch("fetch.php")
     .then(res => res.text())
     .then(data => {
-        if(data && data.trim().startsWith('<')){
+        let trimmed = data ? data.trim() : '';
+        // If server returned rendered list items, insert them.
+        // If it returned raw PHP source (starts with "<?php") or doesn't contain <li>, treat as non-executable and fall back to client mode.
+        if(trimmed && trimmed.indexOf('<?php') === -1 && /<li[\s>]/i.test(trimmed)){
             document.getElementById("studentList").innerHTML = data;
             updateCount();
         } else {
-            // unexpected server response -> switch to client mode
+            // server returned PHP source or non-list -> switch to client mode
             useClient = true;
             loadStudentsClient();
         }
