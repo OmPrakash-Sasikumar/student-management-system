@@ -196,6 +196,10 @@ function logout(){
     window.location.href = "logout.php";
 }
 
+function goDashboard(){
+    window.location.href = "dashboard.php";
+}
+
 function goHome(){
     window.location.href = "index.php";
 }
