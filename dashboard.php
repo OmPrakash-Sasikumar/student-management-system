@@ -76,7 +76,7 @@ new Chart(ctx, {
 });
 
 function goBack(){
-    window.location.href = "index.html";
+    window.location.href = "index.php";
 }
 
 </script>
