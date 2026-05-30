@@ -38,7 +38,8 @@ while($row = mysqli_fetch_assoc($res)){
 <div class="form-box">
     <h3>Total Students: <?php echo $total; ?></h3>
     <h3>Average Marks: <?php echo round($avg,2); ?></h3>
-    <h3>
+function goBack(){
+    window.location.href = "index.html";
         Top Student: 
         <?php 
             if($top){
@@ -75,7 +76,7 @@ new Chart(ctx, {
 });
 
 function goBack(){
-    window.location.href = "index.php";
+    window.location.href = "index.html";
 }
 
 </script>

@@ -1,0 +1,13 @@
+# Ignore local DB config and environment files
+db.php
+.env
+*.sql
+
+# PHP / common
+/vendor/
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db
+desktop.ini
