@@ -38,9 +38,8 @@ while($row = mysqli_fetch_assoc($res)){
 <div class="form-box">
     <h3>Total Students: <?php echo $total; ?></h3>
     <h3>Average Marks: <?php echo round($avg,2); ?></h3>
-function goBack(){
-    window.location.href = "index.html";
-        Top Student: 
+    <h3>
+        Top Student:
         <?php 
             if($top){
                 echo $top['name'] . " (" . $top['marks'] . ")";

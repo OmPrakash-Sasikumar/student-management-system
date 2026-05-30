@@ -14,24 +14,32 @@
 
 <script>
 function login(){
-
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
+
+    if(!username || !password){
+        alert('Please enter username and password');
+        return;
+    }
 
     fetch("login.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "username=" + username + "&password=" + password
+        body: "username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password)
     })
     .then(res => res.text())
     .then(data => {
         if(data === "success"){
             window.location.href = "index.php";
-        }else{
-            alert("Invalid Login");
+        } else {
+            alert('Invalid credentials');
         }
+    })
+    .catch(err => {
+        console.error('Login error', err);
+        alert('Unable to login');
     });
 }
 </script>
